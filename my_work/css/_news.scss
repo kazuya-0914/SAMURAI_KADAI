@@ -1,0 +1,30 @@
+#news {
+  margin-bottom: $section-bottom;
+  > dl {
+    display: flex;
+    @include media(sp) {
+      flex-direction: column;
+    }
+    border-top: $common-border;
+    flex-wrap: wrap;
+  }
+  dt {
+    width: 20%;
+    padding: 20px;
+    border-bottom: $common-border;
+    @include media(sp) {
+      width: 100%;
+      padding: 15px 15px 0px 15px;
+      border-bottom: 0px
+    }
+  }
+  dd {
+    border-bottom: $common-border;
+    width: 80%;
+    padding: 20px;
+    @include media(sp) {
+      width: 100%;
+      padding: 0px 15px 15px 15px;
+    }
+  }
+}

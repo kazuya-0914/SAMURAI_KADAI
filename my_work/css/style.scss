@@ -1,0 +1,55 @@
+// ブレイクポイント
+$breakpoints: (
+  sp: "screen and (max-width:600px)",
+  pc: "screen and (min-width:601px)",
+);
+@mixin media($breakpoint) {
+  @media #{map-get($breakpoints, $breakpoint)}{
+    @content;
+  }
+}
+
+// スペース
+$bottom: 80px;
+$bottom_sp: 40px;
+$section-bottom: 100px;
+$text-bottom: 40px;
+
+// ボーダー
+$common-border: solid 1px silver;
+
+// フォント
+body {
+  font-size: 100%;
+}
+
+// 共通スタイル
+h1 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: $bottom;
+  @include media(sp) {
+    margin-bottom: $bottom_sp;
+  }
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.wrapper {
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 0 4%;
+  font-size: 0.9em
+}
+
+// 外部ファイルの読み込み
+@import "_header";
+@import "_about";
+@import "_works";
+@import "_news";
+@import "_contact";
+@import "_footer";

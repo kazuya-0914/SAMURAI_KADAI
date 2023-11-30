@@ -1,0 +1,35 @@
+#contact {
+  margin-bottom: $section-bottom;
+}
+.form-grid {
+  display: grid;
+  margin-bottom: 40px;
+  align-items: center;
+  grid-template-columns: 20% 80%;
+  row-gap: 10px;
+  @include media(sp) {
+    grid-template-columns: 100%;
+    row-gap: 0px;
+  }
+  input, textarea {
+    border: $common-border;
+  }
+  input {
+    height: 40px;
+    @include media(sp) {
+      margin-bottom: 10px;
+    }
+  }
+  textarea {
+    height: 150px;
+  }
+}
+
+.form-input {
+  text-align: center;
+  > input {
+    background-color: black;
+    color: white;
+    padding: 15px 90px;
+  }
+}

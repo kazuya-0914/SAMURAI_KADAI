@@ -1,0 +1,16 @@
+#works {
+  margin-bottom: $section-bottom;
+  > div {
+    display: grid;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(3, auto);
+    @include media(sp) {
+      grid-template-columns: auto;
+    }
+    > img {
+      width: 100%;
+    }
+  }
+}
